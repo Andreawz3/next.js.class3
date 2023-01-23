@@ -25,7 +25,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
-            <Link href="about">About</Link>
+            <Link href="../about">About</Link>
           </p>
           <div>
             <a
@@ -66,23 +66,32 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.grid}>
-          <h4>Business Degrees:</h4>
-          {information && information.map((info, index) => {
-            if(info.department.toLowerCase() === "business") {
-              return(
-                <Card key={index} degree={info.degree} colour="red" font="10px"/>
-              )
-            }
-          })}
-          <b>Computer Degrees:</b>
-          {information && information.map((info, index) => {
-            if(info.department.toLowerCase() === "computing") {
-              return(
-                <Card key={index} degree={info.degree} colour="blue" font="15px"/>
-              )
-            }
-          })}
+        <div className={styles.flex}>
+          <div>
+            <h4>Business Degrees:</h4>
+            <div className={styles.degree}>
+              {information && information.map((info, index) => {
+                if(info.department.toLowerCase() === "business") {
+                  return(
+                    <Card key={index} degree={info.degree} colour="#0885ff33" font="16px"/>
+                  )
+                }
+              })}
+            </div>           
+          </div>
+          <div>
+            <h4>Computer Degrees:</h4>
+            <div className={styles.degree}>
+              {information && information.map((info, index) => {
+                if(info.department.toLowerCase() === "computing") {
+                  return(
+                    <Card key={index} degree={info.degree} colour="#294b65" font="16px"/>
+                  )
+                }
+              })}
+            </div>
+            
+          </div>
         </div>
       </main>
     </>

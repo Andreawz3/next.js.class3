@@ -38,5 +38,13 @@
             "department": "Computing",
             "degree": "Applied Computer Information Systems Certificate",
             "graduted": 2021
+        },
+        {
+            "studentNumber": "A0000123",
+            "firstName": "Person 6",
+            "gpa": 4.5,
+            "department": "Business",
+            "degree": "Marketing",
+            "graduted": 2019
         }
 ]

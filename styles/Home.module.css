@@ -33,22 +33,38 @@
   border: 1px solid rgba(var(--callout-border-rgb), 0.3);
   border-radius: var(--border-radius);
 }
+.description p:hover {
+  background-color: white;
+  color: black;
+}
 
 .code {
   font-weight: 700;
   font-family: var(--font-mono);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  width: var(--max-width);
-  max-width: 100%;
-  /* background-color: aqua */
+.flex {
+  display: flex;
+  flex-direction: row;
+  gap: 120px;
 }
-/* .grid div {
-  margin: 10px;
-} */
+
+.flex h4 {
+  margin-bottom: 10px;
+}
+
+.degree {
+  display: flex;
+  flex-direction: column;
+}
+
+.degree div {
+  padding: 10px;
+}
+
+.degree img {
+  margin-right: 15px;
+}
 
 .card {
   padding: 1rem 1.2rem;
@@ -155,6 +171,40 @@
   background-clip: content-box;
 }
 
+/* About Page */
+.info h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #356895;
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.employeeInfo {
+  font-size: 18px;
+}
+
+.employeeInfo h4 {
+  margin-top: 10px;
+  color: #90c3f0;
+}
+
+.employeeInfo i {
+  color: rgb(168, 168, 39);
+}
+
+.employeeImg {
+  width: 380px;
+  height: 480px;
+}
+
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -182,14 +232,7 @@
   .content {
     padding: 4rem;
   }
-
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
-  }
-
+  
   .card {
     padding: 1rem 2.5rem;
   }
@@ -255,11 +298,6 @@
 }
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .grid {
-    grid-template-columns: repeat(2, 50%);
-  }
-}
 
 @media (prefers-color-scheme: dark) {
   .vercelLogo {
